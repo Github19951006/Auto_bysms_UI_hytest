@@ -16,7 +16,14 @@ class UI_0101:
 		
 		STEP(1,'登录网站')
 		# 创建一个webdriver 实例对象，指明使用Chrome浏览器驱动
-		webDriver = webdriver.Chrome()
+		# 加上参数，禁止 chromedriver 日志写屏
+		options = webdriver.ChromeOptions()
+		options.add_experimental_option(
+			'excludeSwitches', ['enable-logging'])
+		
+		# 这里指定 options 参数
+		webDriver = webdriver.Chrome(options=options)
+		
 		# 设置等等时间
 		webDriver.implicitly_wait(5)
 		
