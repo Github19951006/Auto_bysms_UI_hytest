@@ -36,6 +36,7 @@ def mgr_login():
 	:return:
 	'''
 	
+	# 调用全局共享 数据
 	webDriver = GSTORE['wd']
 	
 	# 根据webdriver对象的get方法 打开指定的web地址
