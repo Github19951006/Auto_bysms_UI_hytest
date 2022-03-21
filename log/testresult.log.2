@@ -1,45 +1,59 @@
 
 
-  ========= 测试开始 : 20220321_222732 =========
+  ========= 测试开始 : 20220322_012326 =========
 
 
 
 >>> cases\Auto_hytest.py
 
-* 检查操作菜单 - UI_0101  -  2022-03-21 22:27:32
+* 检查操作菜单 - UI_0101  -  2022-03-22 01:23:26
 
   [ case execution steps ]
 
--- 第 1 步 -- 登录网站 
+-- 第 1 步 -- 打开浏览器，登录网站 
 
 
 -- 第 2 步 -- 获取左侧菜单信息 
 
-['客户', '药品', '订单']
-
--- 第 3 步 -- 检查菜单栏信息 
-
-
-** 检查点 **  左侧菜单检查 ---->  通过
-
-  PASS 
+  ABORT   name 'webDriver' is not defined 
+Traceback:
+  File "cases\Auto_hytest.py", line 23, in teststeps
+    sidebar_menu = webDriver.find_element(By.CLASS_NAME, 'sidebar-menu')
+NameError: name 'webDriver' is not defined
 
 
-  ========= 测试结束 : 20220321_222741 =========
+* 添加客户信息 - UI_0102  -  2022-03-22 01:23:32
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 打开浏览器，登录网站 
 
 
-  耗时    : 8.986 秒
+-- 第 2 步 -- 点击左侧菜单客户按钮 
+
+  ABORT   name 'webDriver' is not defined 
+Traceback:
+  File "cases\Auto_hytest.py", line 43, in teststeps
+    webDriver.find_element(
+NameError: name 'webDriver' is not defined
 
 
-  预备执行用例数量 : 1
 
-  实际执行用例数量 : 1
+  ========= 测试结束 : 20220322_012336 =========
 
-  通过 : 1
+
+  耗时    : 9.988 秒
+
+
+  预备执行用例数量 : 2
+
+  实际执行用例数量 : 2
+
+  通过 : 0
 
   失败 : 0
 
-  异常 : 0
+  异常 : 2
 
   套件初始化失败 : 0
 
