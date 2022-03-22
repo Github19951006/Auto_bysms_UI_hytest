@@ -18,6 +18,7 @@ def open_browser():
 	
 	# 创建一个webdriver 实例对象，指明使用Chrome浏览器驱动
 	# 加上参数，禁止 chromedriver 日志写屏
+	INFO('打开浏览器')
 	options = webdriver.ChromeOptions()
 	options.add_experimental_option(
 		'excludeSwitches', ['enable-logging'])
@@ -28,16 +29,16 @@ def open_browser():
 	webDriver.implicitly_wait(5)
 	
 	# 存储 全局共享 数据
-	GSTORE['wd'] = webDriver
+	GSTORE['webDriver'] = webDriver
 
 def mgr_login():
 	'''
 	管理员登录
-	:return:
+	:return:空
 	'''
 	
 	# 调用全局共享 数据
-	webDriver = GSTORE['wd']
+	webDriver = GSTORE['webDriver']
 	
 	# 根据webdriver对象的get方法 打开指定的web地址
 	web_file = r'http://127.0.0.1/mgr/sign.html'

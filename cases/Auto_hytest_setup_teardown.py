@@ -3,7 +3,7 @@
 @Author : 文跃锐（yuerwen）
 @University:东莞理工学院
 @Time   : 2022/03/21
-@File   :Auto_hytest.py
+@File   :Auto_hytest_setup_teardown.py
 """
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -14,13 +14,19 @@ import time
 class UI_0101:
 	name = '检查操作菜单 - UI_0101'
 	
-	def teststeps(self):
-		
-		STEP(1, '打开浏览器，登录网站')
+	# 初始化方法
+	def setup(self):
 		open_browser()
 		mgr_login()
 		
-		STEP(2,'获取左侧菜单信息')
+	# 初始清除
+	def teardown(self):
+		webDriver = GSTORE['webDriver']
+		webDriver.quit()
+		
+	def teststeps(self):
+		
+		STEP(1,'获取左侧菜单信息')
 		webDriver = GSTORE['webDriver']
 		
 		sidebar_menu = webDriver.find_element(By.CLASS_NAME, 'sidebar-menu')
@@ -28,21 +34,28 @@ class UI_0101:
 		menuText = [span.text for span in span_lists]
 		INFO(menuText[:3])
 		
-		STEP(3,'检查菜单栏信息')
+		STEP(2,'检查菜单栏信息')
 		CHECK_POINT('左侧菜单检查',menuText[:3] == ['客户', '药品', '订单'])
 		
-		webDriver.quit()
+		
 		
 class UI_0102:
 	name = '添加客户信息 - UI_0102'
 	
-	def teststeps(self):
-		
-		STEP(1, '打开浏览器，登录网站')
+	# 初始化方法
+	def setup(self):
 		open_browser()
 		mgr_login()
+	
+	# 初始清除
+	def teardown(self):
+		webDriver = GSTORE['webDriver']
+		webDriver.quit()
 		
-		STEP(2,'点击左侧菜单客户按钮')
+	def teststeps(self):
+		
+		STEP(1,'点击左侧菜单客户按钮')
+		
 		webDriver = GSTORE['webDriver']
 		
 		webDriver.find_element(
@@ -52,7 +65,7 @@ class UI_0102:
 		# 缓存1s
 		time.sleep(1)
 		
-		STEP(3,'添加客户信息')
+		STEP(2,'添加客户信息')
 		col_elemet = webDriver.find_element(By.CLASS_NAME, 'add-one-area')
 		col_elemet.find_element(By.CLASS_NAME, 'btn-md').click()
 		form_controls = col_elemet.find_elements(By.CLASS_NAME, 'form-control')
@@ -64,7 +77,7 @@ class UI_0102:
 		# 缓存1s
 		time.sleep(1)
 		
-		STEP(4,'获取添加的客户信息')
+		STEP(3,'获取添加的客户信息')
 		result_element = webDriver.find_element(By.CLASS_NAME, 'search-result-item')
 		result_element_itemrs = result_element.find_elements(By.CLASS_NAME, 'search-result-item-field')
 		
@@ -85,4 +98,3 @@ class UI_0102:
 		CHECK_POINT('客户信息检查',result_element_itemrs_list == expected)
 		
 		webDriver.quit()
-		
