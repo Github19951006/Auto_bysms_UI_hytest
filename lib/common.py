@@ -36,7 +36,7 @@ def mgr_login():
 	管理员登录
 	:return:空
 	'''
-	
+	INFO('登录管理系统')
 	# 调用全局共享 数据
 	webDriver = GSTORE['webDriver']
 	

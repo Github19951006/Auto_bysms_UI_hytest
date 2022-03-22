@@ -1,189 +1,63 @@
 
 
-  ========= 测试开始 : 20220322_232149 =========
+  ========= 测试开始 : 20220322_235703 =========
 
 
 
->>> cases\Auto_hytest_setup_teardown.py
+>>> cases\Auto_hytest_suite_setup_teardown.py
 
-* 检查操作菜单 - UI_0101  -  2022-03-22 23:21:49
-
-[ case setup ] 检查操作菜单 - UI_0101
+[ suite setup ] cases\Auto_hytest_suite_setup_teardown.py
+suite_setup
 打开浏览器
-case setup fail | Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=98.0.4758.102)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00BA7AC3+2587331]
-	Ordinal0 [0x00B3ADD1+2141649]
-	Ordinal0 [0x00A33BB8+1063864]
-	Ordinal0 [0x00A30661+1050209]
-	Ordinal0 [0x00A25F2D+1007405]
-	Ordinal0 [0x00A26B9E+1010590]
-	Ordinal0 [0x00A2618E+1008014]
-	Ordinal0 [0x00A25780+1005440]
-	Ordinal0 [0x00A248B7+1001655]
-	Ordinal0 [0x00A24B76+1002358]
-	Ordinal0 [0x00A352AA+1069738]
-	Ordinal0 [0x00A88FBD+1413053]
-	Ordinal0 [0x00A7868C+1345164]
-	Ordinal0 [0x00A88A0A+1411594]
-	Ordinal0 [0x00A784A6+1344678]
-	Ordinal0 [0x00A553F6+1201142]
-	Ordinal0 [0x00A562E6+1204966]
-	GetHandleVerifier [0x00D4DF22+1680738]
-	GetHandleVerifier [0x00E00DBC+2413564]
-	GetHandleVerifier [0x00C3D151+563089]
-	GetHandleVerifier [0x00C3BF13+558419]
-	Ordinal0 [0x00B4081E+2164766]
-	Ordinal0 [0x00B45508+2184456]
-	Ordinal0 [0x00B45650+2184784]
-	Ordinal0 [0x00B4F5BC+2225596]
-	BaseThreadInitThunk [0x76CB0419+25]
-	RtlGetAppContainerNamedObjectPath [0x77D172AD+237]
-	RtlGetAppContainerNamedObjectPath [0x77D1727D+189]
- 
-Traceback:
-  File "cases\Auto_hytest_setup_teardown.py", line 20, in setup
-    mgr_login()
-  File "D:\study\Auto_hytest\lib\common.py", line 45, in mgr_login
-    webDriver.get(web_file)
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 430, in get
-    self.execute(Command.GET, {'url': url})
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 418, in execute
-    self.error_handler.check_response(response)
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 243, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=98.0.4758.102)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00BA7AC3+2587331]
-	Ordinal0 [0x00B3ADD1+2141649]
-	Ordinal0 [0x00A33BB8+1063864]
-	Ordinal0 [0x00A30661+1050209]
-	Ordinal0 [0x00A25F2D+1007405]
-	Ordinal0 [0x00A26B9E+1010590]
-	Ordinal0 [0x00A2618E+1008014]
-	Ordinal0 [0x00A25780+1005440]
-	Ordinal0 [0x00A248B7+1001655]
-	Ordinal0 [0x00A24B76+1002358]
-	Ordinal0 [0x00A352AA+1069738]
-	Ordinal0 [0x00A88FBD+1413053]
-	Ordinal0 [0x00A7868C+1345164]
-	Ordinal0 [0x00A88A0A+1411594]
-	Ordinal0 [0x00A784A6+1344678]
-	Ordinal0 [0x00A553F6+1201142]
-	Ordinal0 [0x00A562E6+1204966]
-	GetHandleVerifier [0x00D4DF22+1680738]
-	GetHandleVerifier [0x00E00DBC+2413564]
-	GetHandleVerifier [0x00C3D151+563089]
-	GetHandleVerifier [0x00C3BF13+558419]
-	Ordinal0 [0x00B4081E+2164766]
-	Ordinal0 [0x00B45508+2184456]
-	Ordinal0 [0x00B45650+2184784]
-	Ordinal0 [0x00B4F5BC+2225596]
-	BaseThreadInitThunk [0x76CB0419+25]
-	RtlGetAppContainerNamedObjectPath [0x77D172AD+237]
-	RtlGetAppContainerNamedObjectPath [0x77D1727D+189]
+
+* 检查操作菜单 - UI_0101  -  2022-03-22 23:57:06
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 获取左侧菜单信息 
+
+['客户', '药品', '订单']
+
+-- 第 2 步 -- 检查菜单栏信息 
 
 
+** 检查点 **  左侧菜单检查 ---->  通过
 
-* 添加客户信息 - UI_0102  -  2022-03-22 23:21:57
+  PASS 
 
-[ case setup ] 添加客户信息 - UI_0102
-打开浏览器
-case setup fail | Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=98.0.4758.102)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00BA7AC3+2587331]
-	Ordinal0 [0x00B3ADD1+2141649]
-	Ordinal0 [0x00A33BB8+1063864]
-	Ordinal0 [0x00A30661+1050209]
-	Ordinal0 [0x00A25F2D+1007405]
-	Ordinal0 [0x00A26B9E+1010590]
-	Ordinal0 [0x00A2618E+1008014]
-	Ordinal0 [0x00A25780+1005440]
-	Ordinal0 [0x00A248B7+1001655]
-	Ordinal0 [0x00A24B76+1002358]
-	Ordinal0 [0x00A352AA+1069738]
-	Ordinal0 [0x00A88FBD+1413053]
-	Ordinal0 [0x00A7868C+1345164]
-	Ordinal0 [0x00A88A0A+1411594]
-	Ordinal0 [0x00A784A6+1344678]
-	Ordinal0 [0x00A553F6+1201142]
-	Ordinal0 [0x00A562E6+1204966]
-	GetHandleVerifier [0x00D4DF22+1680738]
-	GetHandleVerifier [0x00E00DBC+2413564]
-	GetHandleVerifier [0x00C3D151+563089]
-	GetHandleVerifier [0x00C3BF13+558419]
-	Ordinal0 [0x00B4081E+2164766]
-	Ordinal0 [0x00B45508+2184456]
-	Ordinal0 [0x00B45650+2184784]
-	Ordinal0 [0x00B4F5BC+2225596]
-	BaseThreadInitThunk [0x76CB0419+25]
-	RtlGetAppContainerNamedObjectPath [0x77D172AD+237]
-	RtlGetAppContainerNamedObjectPath [0x77D1727D+189]
- 
-Traceback:
-  File "cases\Auto_hytest_setup_teardown.py", line 48, in setup
-    mgr_login()
-  File "D:\study\Auto_hytest\lib\common.py", line 45, in mgr_login
-    webDriver.get(web_file)
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 430, in get
-    self.execute(Command.GET, {'url': url})
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 418, in execute
-    self.error_handler.check_response(response)
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 243, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.WebDriverException: Message: unknown error: net::ERR_CONNECTION_REFUSED
-  (Session info: chrome=98.0.4758.102)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00BA7AC3+2587331]
-	Ordinal0 [0x00B3ADD1+2141649]
-	Ordinal0 [0x00A33BB8+1063864]
-	Ordinal0 [0x00A30661+1050209]
-	Ordinal0 [0x00A25F2D+1007405]
-	Ordinal0 [0x00A26B9E+1010590]
-	Ordinal0 [0x00A2618E+1008014]
-	Ordinal0 [0x00A25780+1005440]
-	Ordinal0 [0x00A248B7+1001655]
-	Ordinal0 [0x00A24B76+1002358]
-	Ordinal0 [0x00A352AA+1069738]
-	Ordinal0 [0x00A88FBD+1413053]
-	Ordinal0 [0x00A7868C+1345164]
-	Ordinal0 [0x00A88A0A+1411594]
-	Ordinal0 [0x00A784A6+1344678]
-	Ordinal0 [0x00A553F6+1201142]
-	Ordinal0 [0x00A562E6+1204966]
-	GetHandleVerifier [0x00D4DF22+1680738]
-	GetHandleVerifier [0x00E00DBC+2413564]
-	GetHandleVerifier [0x00C3D151+563089]
-	GetHandleVerifier [0x00C3BF13+558419]
-	Ordinal0 [0x00B4081E+2164766]
-	Ordinal0 [0x00B45508+2184456]
-	Ordinal0 [0x00B45650+2184784]
-	Ordinal0 [0x00B4F5BC+2225596]
-	BaseThreadInitThunk [0x76CB0419+25]
-	RtlGetAppContainerNamedObjectPath [0x77D172AD+237]
-	RtlGetAppContainerNamedObjectPath [0x77D1727D+189]
+* 添加客户信息 - UI_0102  -  2022-03-22 23:57:06
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 点击左侧菜单客户按钮 
 
 
+-- 第 2 步 -- 添加客户信息 
 
 
-  ========= 测试结束 : 20220322_232202 =========
+-- 第 3 步 -- 获取添加的客户信息 
+
+['客户名：', '罗湖人民医院', '联系电话：', '0755-120', '地址：', '深圳市罗湖区友谊路人民医院']
+
+** 检查点 **  客户信息检查 ---->  通过
+
+  PASS 
+
+[ suite teardown ] cases\Auto_hytest_suite_setup_teardown.py
+suite_teardown
 
 
-  耗时    : 13.329 秒
+  ========= 测试结束 : 20220322_235719 =========
+
+
+  耗时    : 16.042 秒
 
 
   预备执行用例数量 : 2
 
   实际执行用例数量 : 2
 
-  通过 : 0
+  通过 : 2
 
   失败 : 0
 
@@ -193,6 +67,6 @@ Backtrace:
 
   套件清除  失败 : 0
 
-  用例初始化失败 : 2
+  用例初始化失败 : 0
 
   用例清除  失败 : 0

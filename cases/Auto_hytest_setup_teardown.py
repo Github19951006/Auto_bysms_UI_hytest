@@ -14,15 +14,15 @@ import time
 class UI_0101:
 	name = '检查操作菜单 - UI_0101'
 	
-	# 初始化方法
-	def setup(self):
-		open_browser()
-		mgr_login()
-		
-	# 初始清除
-	def teardown(self):
-		webDriver = GSTORE['webDriver']
-		webDriver.quit()
+	# # 初始化方法
+	# def setup(self):
+	# 	open_browser()
+	# 	mgr_login()
+	#
+	# # 初始清除
+	# def teardown(self):
+	# 	webDriver = GSTORE['webDriver']
+	# 	webDriver.quit()
 		
 	def teststeps(self):
 		
@@ -42,15 +42,15 @@ class UI_0101:
 class UI_0102:
 	name = '添加客户信息 - UI_0102'
 	
-	# 初始化方法
-	def setup(self):
-		open_browser()
-		mgr_login()
-	
-	# 初始清除
-	def teardown(self):
-		webDriver = GSTORE['webDriver']
-		webDriver.quit()
+	# # 初始化方法
+	# def setup(self):
+	# 	open_browser()
+	# 	mgr_login()
+	#
+	# # 初始清除
+	# def teardown(self):
+	# 	webDriver = GSTORE['webDriver']
+	# 	webDriver.quit()
 		
 	def teststeps(self):
 		
@@ -97,4 +97,4 @@ class UI_0102:
 		]
 		CHECK_POINT('客户信息检查',result_element_itemrs_list == expected)
 		
-		webDriver.quit()
+	
