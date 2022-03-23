@@ -5,8 +5,8 @@
 @Time   : 2022/03/23
 @File   :__st__.py
 """
-from lib.common import *
 
+from lib.common import *
 def suite_setup():
 	INFO('suite_setup')
 	open_browser()
@@ -17,3 +17,6 @@ def suite_teardown():
 	INFO('suite_teardown')
 	webDriver = GSTORE['webDriver']
 	webDriver.quit()
+	
+	
+	
