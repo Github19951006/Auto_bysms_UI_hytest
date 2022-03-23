@@ -7,5 +7,7 @@
 """
 from lib.common import *
 
+# 根据标签挑选
+force_tags = ['管理员登录','冒烟测试','系统测试']
 # def suite_setup():
 # 	mgr_login()

@@ -11,6 +11,9 @@ from hytest import STEP,INFO,CHECK_POINT
 from lib.common import *
 import time
 
+# 根据标签挑选
+force_tags = ['管理员登录','冒烟测试','UI测试']
+
 class UI_000x:
 	
 	ddt_cases = [
