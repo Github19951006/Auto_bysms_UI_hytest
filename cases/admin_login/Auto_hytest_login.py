@@ -12,7 +12,7 @@ from lib.common import *
 import time
 
 # 根据标签挑选
-force_tags = ['管理员登录','冒烟测试','UI测试']
+force_tags = ['管理员登录','冒烟测试','UI测试','yuerwen']
 
 class UI_000x:
 	
