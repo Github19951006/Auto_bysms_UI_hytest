@@ -3,7 +3,7 @@
 @Author : 文跃锐（yuerwen）
 @University:东莞理工学院
 @Time   : 2022/03/21
-@File   :Auto_hytest_suite_setup_teardown.py
+@File   :Auto_hytest_action.py
 """
 from lib.common import *
 import time
@@ -27,7 +27,7 @@ class UI_0101:
 	# 根据标签挑选
 	tags = ['管理员操作',  '系统测试']
 	
-	name = '检查操作菜单 - UI_0101'
+	name = '检查操作菜单 - UI-0101'
 	'''
 		# 初始化方法
 		def setup(self):
@@ -55,7 +55,7 @@ class UI_0101:
 		
 		
 class UI_0102:
-	name = '添加客户信息 - UI_0102'
+	name = '添加客户信息 - UI-0102'
 	'''
 		# 初始化方法
 		def setup(self):

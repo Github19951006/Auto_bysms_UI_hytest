@@ -3,7 +3,7 @@
 @Author : 文跃锐（yuerwen）
 @University:东莞理工学院
 @Time   : 2022/03/21
-@File   :Auto_hytest_login.py
+@File   :auto_hytest_login.py
 """
 from selenium import webdriver
 from selenium.webdriver.common.by import By
@@ -18,23 +18,23 @@ class UI_000x:
 	
 	ddt_cases = [
 		{
-			'name' : '管理员登录 不输入账号 - UI_0001',
+			'name' : '管理员登录 不输入账号 - UI-0001',
 			'para':[None,'88888888','请输入用户名']
 		},
 		{
-			'name': '管理员登录 不输入密码 - UI_0002',
+			'name': '管理员登录 不输入密码 - UI-0002',
 			'para': ['byhy', None,'请输入密码']
 		},
 		{
-			'name': '管理员登录 输入错误账号 - UI_0003',
+			'name': '管理员登录 输入错误账号 - UI-0003',
 			'para': ['yuerwen', '88888888','登录失败 : 用户名或者密码错误']
 		},
 		{
-			'name': '管理员登录 输入错误密码 - UI_0003',
+			'name': '管理员登录 输入错误密码 - UI-0004',
 			'para': ['byhy', '666666','登录失败 : 用户名或者密码错误']
 		},
 		{
-			'name': '管理员登录 输入错误密码 - UI_0003',
+			'name': '管理员登录 输入错误密码 - UI-0005',
 			'para': [None, None, '请输入用户名']
 		}
 	]
