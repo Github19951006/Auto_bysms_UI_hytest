@@ -11,9 +11,11 @@ import time
 
 def area_click(info):
 	'''
-	area_click:点击左侧菜单客户按钮
+	点击左侧菜单客户按钮
+	:param info: 判断左侧菜单按钮信息
 	:return:
 	'''
+
 	webDriver = GSTORE['webDriver']
 	
 	# 判断左侧操作菜单栏按钮信息
@@ -56,7 +58,9 @@ def area_click(info):
 	
 def add_customer_drugs_order(info,info_list):
 	'''
-	add_customer_drugs_order :添加客户、药品、订单信息方法
+	添加客户、药品、订单信息方法
+	:param info: 判断添加信息
+	:param info_list: 输入信息列表
 	:return:
 	'''
 	
@@ -146,10 +150,11 @@ def add_customer_drugs_order(info,info_list):
 	
 def get_customer_drugs_order_info(info):
 	'''
-	get_customer_drugs_order_info:获取用户添加后的客户、药品、订单信息的方法
-	返回一个信息列表
-	:return: result_element_itemrs_list
+	获取用户添加后的客户、药品、订单信息的方法
+	:param info: 判断信息
+	:return: 获取检查信息列表
 	'''
+
 	webDriver = GSTORE['webDriver']
 	result_element = webDriver.find_element(By.CLASS_NAME, 'search-result-item')
 	result_element_itemrs = result_element.find_elements(

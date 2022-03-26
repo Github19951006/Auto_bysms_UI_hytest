@@ -69,7 +69,9 @@ class UI_0102:
 		area_click('客户')
 		
 		STEP(2, '添加单客户信息')
-		add_customer_drugs_order('添加单客户信息',['罗湖人民医院','0755-120','深圳市罗湖区友谊路人民医院'])
+		add_customer_drugs_order(
+			'添加单客户信息',['罗湖人民医院','0755-120','深圳市罗湖区友谊路人民医院']
+		)
 		
 		STEP(3, '获取添加的客户信息')
 		expected = [
@@ -80,7 +82,9 @@ class UI_0102:
 			'地址：',
 			'深圳市罗湖区友谊路人民医院'
 		]
-		CHECK_POINT('检查获取的客户信息', get_customer_drugs_order_info('客户信息') == expected)
+		CHECK_POINT('检查获取的客户信息',
+		            get_customer_drugs_order_info('客户信息') == expected
+		            )
 		
 
 class UI_0103:
@@ -108,7 +112,9 @@ class UI_0103:
 		area_click('客户')
 		
 		STEP(2, '添加单客户信息')
-		add_customer_drugs_order('添加单客户信息',['罗湖人民医院','0755-120','深圳市罗湖区友谊路人民医院'])
+		add_customer_drugs_order(
+			'添加单客户信息',['罗湖人民医院','0755-120','深圳市罗湖区友谊路人民医院']
+		)
 		
 		STEP(3, '获取添加的客户信息')
 		expected = [
@@ -119,7 +125,9 @@ class UI_0103:
 			'地址：',
 			'深圳市罗湖区友谊路人民医院'
 		]
-		CHECK_POINT('检查获取的信息',get_customer_drugs_order_info('客户信息') == expected)
+		CHECK_POINT('检查获取的信息',
+		            get_customer_drugs_order_info('客户信息') == expected
+		            )
 		
 		STEP(4,'修改客户信息')
 		# 获取添加的客户信息
@@ -147,7 +155,10 @@ class UI_0103:
 			'深圳市罗湖区友谊路人民医院'
 		]
 		
-		CHECK_POINT('检查获取的客户信息', get_customer_drugs_order_info('客户信息') == expected)
+		CHECK_POINT('检查获取的客户信息',
+		            get_customer_drugs_order_info('客户信息') == expected
+		            )
+
 
 class UI_0105:
 	'''
@@ -183,7 +194,9 @@ class UI_0105:
 		
 		# 预期结果
 		expected = ['药品：', '阿莫西林软膏', '编号：', '0001', '描述：', '中国好药膏']
-		CHECK_POINT('检查获取的药品信息', get_customer_drugs_order_info('药品信息') == expected)
+		CHECK_POINT('检查获取的药品信息',
+		            get_customer_drugs_order_info('药品信息') == expected
+		            )
 
 
 class UI_0107:
@@ -231,13 +244,17 @@ class UI_0107:
 		area_click('客户')
 		
 		STEP(4, '添加多客户信息')
-		add_customer_drugs_order('添加多客户信息', ['南方医科大学', '0755-120', '广东省-罗湖区-友谊路人民医院-50'])
+		add_customer_drugs_order('添加多客户信息',
+		                         ['南方医科大学', '0755-120', '广东省-罗湖区-友谊路人民医院-50']
+		                         )
 		
 		STEP(5, '点击左侧菜单订单按钮_添加订单')
 		area_click('订单')
 		
 		STEP(6, '添加订单信息')
-		add_customer_drugs_order('添加订单信息', ['Auto-yuerwen-test1','南方医科大学2', '青霉素盒装2', 100])
+		add_customer_drugs_order('添加订单信息',
+		                         ['Auto-yuerwen-test1','南方医科大学2', '青霉素盒装2', 100]
+		                         )
 		
 		STEP(7, '获取添加的订单信息')
 		# 预期结果
@@ -248,6 +265,8 @@ class UI_0107:
 		          '药品：',
 		          '青霉素盒装2 * 100'
 		          ]
-		CHECK_POINT('检查获取的药品信息', get_customer_drugs_order_info('订单信息') == expect)
+		CHECK_POINT('检查获取的药品信息',
+		            get_customer_drugs_order_info('订单信息') == expect
+		            )
 		
 		
