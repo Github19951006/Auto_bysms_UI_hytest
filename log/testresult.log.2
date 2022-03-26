@@ -1,6 +1,6 @@
 
 
-  ========= 测试开始 : 20220326_182916 =========
+  ========= 测试开始 : 20220326_182937 =========
 
 
 
@@ -14,7 +14,86 @@ suite_setup
 
 >>> cases\Admin_action\auto_hytest_action.py
 
-* 添加订单信息 - UI-0107  -  2022-03-26 18:29:19
+* 检查操作菜单 - UI-0101  -  2022-03-26 18:29:40
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 获取左侧菜单信息 
+
+['客户', '药品', '订单']
+
+-- 第 2 步 -- 检查菜单栏信息 
+
+
+** 检查点 **  左侧菜单检查 ---->  通过
+
+  PASS 
+
+* 添加客户信息 - UI-0102  -  2022-03-26 18:29:41
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 点击左侧菜单客户按钮_添加客户 
+
+
+-- 第 2 步 -- 添加单客户信息 
+
+
+-- 第 3 步 -- 获取添加的客户信息 
+
+['客户名：', '罗湖人民医院', '联系电话：', '0755-120', '地址：', '深圳市罗湖区友谊路人民医院']
+
+** 检查点 **  检查获取的客户信息 ---->  通过
+
+  PASS 
+
+* 修改客户信息 - UI-0103  -  2022-03-26 18:29:43
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 点击左侧菜单客户按钮_添加客户 
+
+
+-- 第 2 步 -- 添加单客户信息 
+
+
+-- 第 3 步 -- 获取添加的客户信息 
+
+['客户名：', '罗湖人民医院', '联系电话：', '0755-120', '地址：', '深圳市罗湖区友谊路人民医院']
+
+** 检查点 **  检查获取的信息 ---->  通过
+
+
+-- 第 4 步 -- 修改客户信息 
+
+
+-- 第 5 步 -- 获取修改的客户信息 
+
+['客户名：', '罗湖人民中医院', '联系电话：', '0755-120', '地址：', '深圳市罗湖区友谊路人民医院']
+
+** 检查点 **  检查获取的客户信息 ---->  通过
+
+  PASS 
+
+* 添加药品信息 - UI-0105  -  2022-03-26 18:29:46
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 点击左侧菜单药品按钮_添加药品 
+
+
+-- 第 2 步 -- 添加单药品信息 
+
+
+-- 第 3 步 -- 获取添加的药品信息 
+
+['药品：', '阿莫西林软膏', '编号：', '0001', '描述：', '中国好药膏']
+
+** 检查点 **  检查获取的药品信息 ---->  通过
+
+  PASS 
+
+* 添加订单信息 - UI-0107  -  2022-03-26 18:29:48
 
   [ case execution steps ]
 
@@ -44,25 +123,157 @@ suite_setup
 
   PASS 
 
+
+>>> cases\admin_login\auto_hytest_login.py
+
+* 管理员登录 不输入账号 - UI-0001  -  2022-03-26 18:29:55
+
+  [ case execution steps ]
+登录管理系统
+
+** 检查点 **  检查提示信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 管理员登录 不输入账号 - UI-0001
+
+* 管理员登录 不输入密码 - UI-0002  -  2022-03-26 18:29:57
+
+  [ case execution steps ]
+登录管理系统
+
+** 检查点 **  检查提示信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 管理员登录 不输入密码 - UI-0002
+
+* 管理员登录 输入错误账号 - UI-0003  -  2022-03-26 18:29:58
+
+  [ case execution steps ]
+登录管理系统
+
+** 检查点 **  检查提示信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 管理员登录 输入错误账号 - UI-0003
+
+* 管理员登录 输入错误密码 - UI-0004  -  2022-03-26 18:29:59
+
+  [ case execution steps ]
+登录管理系统
+
+** 检查点 **  检查提示信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 管理员登录 输入错误密码 - UI-0004
+
+* 管理员登录 输入错误密码 - UI-0005  -  2022-03-26 18:30:01
+
+  [ case execution steps ]
+登录管理系统
+
+** 检查点 **  检查提示信息 ---->  通过
+
+  PASS 
+
+[ case teardown ] 管理员登录 输入错误密码 - UI-0005
+
+
+>>> cases\Windows_action\auto_hytest_windows.py
+
+* 窗口切换 - UI-0106  -  2022-03-26 18:30:02
+
+  [ case execution steps ]
+
+-- 第 1 步 -- 点击页脚处链接’白月黑羽教学使用，点击访问官网‘ 
+
+  ABORT   Message: no such element: Unable to locate element: {"method":"css selector","selector":".main-footer .pull-right a[href]"}
+  (Session info: chrome=98.0.4758.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x01457AC3+2587331]
+	Ordinal0 [0x013EADD1+2141649]
+	Ordinal0 [0x012E3BB8+1063864]
+	Ordinal0 [0x013101CE+1245646]
+	Ordinal0 [0x013103CB+1246155]
+	Ordinal0 [0x0133A612+1418770]
+	Ordinal0 [0x013286D4+1345236]
+	Ordinal0 [0x01338A0A+1411594]
+	Ordinal0 [0x013284A6+1344678]
+	Ordinal0 [0x013053F6+1201142]
+	Ordinal0 [0x013062E6+1204966]
+	GetHandleVerifier [0x015FDF22+1680738]
+	GetHandleVerifier [0x016B0DBC+2413564]
+	GetHandleVerifier [0x014ED151+563089]
+	GetHandleVerifier [0x014EBF13+558419]
+	Ordinal0 [0x013F081E+2164766]
+	Ordinal0 [0x013F5508+2184456]
+	Ordinal0 [0x013F5650+2184784]
+	Ordinal0 [0x013FF5BC+2225596]
+	BaseThreadInitThunk [0x764D0419+25]
+	RtlGetAppContainerNamedObjectPath [0x771772AD+237]
+	RtlGetAppContainerNamedObjectPath [0x7717727D+189]
+ 
+Traceback:
+  File "cases\Windows_action\auto_hytest_windows.py", line 23, in teststeps
+    webDriver.find_element(By.CSS_SELECTOR,
+  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1238, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 418, in execute
+    self.error_handler.check_response(response)
+  File "c:\python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".main-footer .pull-right a[href]"}
+  (Session info: chrome=98.0.4758.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x01457AC3+2587331]
+	Ordinal0 [0x013EADD1+2141649]
+	Ordinal0 [0x012E3BB8+1063864]
+	Ordinal0 [0x013101CE+1245646]
+	Ordinal0 [0x013103CB+1246155]
+	Ordinal0 [0x0133A612+1418770]
+	Ordinal0 [0x013286D4+1345236]
+	Ordinal0 [0x01338A0A+1411594]
+	Ordinal0 [0x013284A6+1344678]
+	Ordinal0 [0x013053F6+1201142]
+	Ordinal0 [0x013062E6+1204966]
+	GetHandleVerifier [0x015FDF22+1680738]
+	GetHandleVerifier [0x016B0DBC+2413564]
+	GetHandleVerifier [0x014ED151+563089]
+	GetHandleVerifier [0x014EBF13+558419]
+	Ordinal0 [0x013F081E+2164766]
+	Ordinal0 [0x013F5508+2184456]
+	Ordinal0 [0x013F5650+2184784]
+	Ordinal0 [0x013FF5BC+2225596]
+	BaseThreadInitThunk [0x764D0419+25]
+	RtlGetAppContainerNamedObjectPath [0x771772AD+237]
+	RtlGetAppContainerNamedObjectPath [0x7717727D+189]
+
+
+
 [ suite teardown ] cases\
 suite_teardown
 
 
-  ========= 测试结束 : 20220326_182927 =========
+  ========= 测试结束 : 20220326_183009 =========
 
 
-  耗时    : 10.921 秒
+  耗时    : 31.753 秒
 
 
-  预备执行用例数量 : 1
+  预备执行用例数量 : 11
 
-  实际执行用例数量 : 1
+  实际执行用例数量 : 11
 
-  通过 : 1
+  通过 : 10
 
   失败 : 0
 
-  异常 : 0
+  异常 : 1
 
   套件初始化失败 : 0
 
