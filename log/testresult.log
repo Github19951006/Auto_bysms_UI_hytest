@@ -1,6 +1,6 @@
 
 
-  ========= 测试开始 : 20220326_191225 =========
+  ========= 测试开始 : 20220326_232226 =========
 
 
 
@@ -14,217 +14,104 @@ suite_setup
 
 >>> cases\Admin_action\auto_hytest_action.py
 
-* 检查操作菜单 - UI-0101  -  2022-03-26 19:12:31
+* 添加订单信息 - UI-0108  -  2022-03-26 23:22:30
 
-  [ case execution steps ]
-
--- 第 1 步 -- 获取左侧菜单信息 
-
-['客户', '药品', '订单']
-
--- 第 2 步 -- 检查菜单栏信息 
-
-
-** 检查点 **  左侧菜单检查 ---->  通过
-
-  PASS 
-
-* 添加客户信息 - UI-0102  -  2022-03-26 19:12:31
-
-  [ case execution steps ]
-
--- 第 1 步 -- 点击左侧菜单客户按钮_添加客户 
-
-
--- 第 2 步 -- 添加单客户信息 
-
-
--- 第 3 步 -- 获取添加的客户信息 
-
-['客户名：', '罗湖人民医院', '联系电话：', '0755-120', '地址：', '深圳市罗湖区友谊路人民医院']
-
-** 检查点 **  检查获取的客户信息 ---->  通过
-
-  PASS 
-
-* 修改客户信息 - UI-0103  -  2022-03-26 19:12:34
-
-  [ case execution steps ]
-
--- 第 1 步 -- 点击左侧菜单客户按钮_添加客户 
-
-
--- 第 2 步 -- 添加单客户信息 
-
-
--- 第 3 步 -- 获取添加的客户信息 
-
-['客户名：', '罗湖人民医院', '联系电话：', '0755-120', '地址：', '深圳市罗湖区友谊路人民医院']
-
-** 检查点 **  检查获取的信息 ---->  通过
-
-
--- 第 4 步 -- 修改客户信息 
-
-
--- 第 5 步 -- 获取修改的客户信息 
-
-['客户名：', '罗湖人民中医院', '联系电话：', '0755-120', '地址：', '深圳市罗湖区友谊路人民医院']
-
-** 检查点 **  检查获取的客户信息 ---->  通过
-
-  PASS 
-
-* 添加药品信息 - UI-0105  -  2022-03-26 19:12:36
-
-  [ case execution steps ]
-
--- 第 1 步 -- 点击左侧菜单药品按钮_添加药品 
-
-
--- 第 2 步 -- 添加单药品信息 
-
-
--- 第 3 步 -- 获取添加的药品信息 
-
-['药品：', '阿莫西林软膏', '编号：', '0001', '描述：', '中国好药膏']
-
-** 检查点 **  检查获取的药品信息 ---->  通过
-
-  PASS 
-
-* 添加订单信息 - UI-0107  -  2022-03-26 19:12:38
-
-  [ case execution steps ]
-
--- 第 1 步 -- 点击左侧菜单药品按钮_添加药品 
-
-
--- 第 2 步 -- 添加多药品信息 
-
-
--- 第 3 步 -- 点击左侧菜单客户按钮_添加客户 
-
-
--- 第 4 步 -- 添加多客户信息 
-
-
--- 第 5 步 -- 点击左侧菜单订单按钮_添加订单 
-
-
--- 第 6 步 -- 添加订单信息 
-
-
--- 第 7 步 -- 获取添加的订单信息 
-
-['订单：', 'Auto-yuerwen-test1', '客户：', '南方医科大学2', '药品：', '青霉素盒装2 * 100']
-
-** 检查点 **  检查获取的药品信息 ---->  通过
-
-  PASS 
-
-
->>> cases\admin_login\auto_hytest_login.py
-
-* 管理员登录 不输入账号 - UI-0001  -  2022-03-26 19:12:46
-
-  [ case execution steps ]
-登录管理系统
-
-** 检查点 **  检查提示信息 ---->  通过
-
-  PASS 
-
-[ case teardown ] 管理员登录 不输入账号 - UI-0001
-
-* 管理员登录 不输入密码 - UI-0002  -  2022-03-26 19:12:47
-
-  [ case execution steps ]
-登录管理系统
-
-** 检查点 **  检查提示信息 ---->  通过
-
-  PASS 
-
-[ case teardown ] 管理员登录 不输入密码 - UI-0002
-
-* 管理员登录 输入错误账号 - UI-0003  -  2022-03-26 19:12:48
-
-  [ case execution steps ]
-登录管理系统
-
-** 检查点 **  检查提示信息 ---->  通过
-
-  PASS 
-
-[ case teardown ] 管理员登录 输入错误账号 - UI-0003
-
-* 管理员登录 输入错误密码 - UI-0004  -  2022-03-26 19:12:50
-
-  [ case execution steps ]
-登录管理系统
-
-** 检查点 **  检查提示信息 ---->  通过
-
-  PASS 
-
-[ case teardown ] 管理员登录 输入错误密码 - UI-0004
-
-* 管理员登录 输入错误密码 - UI-0005  -  2022-03-26 19:12:51
-
-  [ case execution steps ]
-登录管理系统
-
-** 检查点 **  检查提示信息 ---->  通过
-
-  PASS 
-
-[ case teardown ] 管理员登录 输入错误密码 - UI-0005
-
-
->>> cases\Windows_action\auto_hytest_windows.py
-
-* 窗口切换 - UI-0106  -  2022-03-26 19:12:52
-
-[ case setup ] 窗口切换 - UI-0106
+[ case setup ] 添加订单信息 - UI-0108
 打开浏览器
 登录管理系统
 
   [ case execution steps ]
 
--- 第 1 步 -- 点击页脚处链接’白月黑羽教学使用，点击访问官网‘ 
+-- 第 1 步 -- 点击左侧菜单药品按钮_添加药品 
+
+  ABORT   Message: chrome not reachable
+  (Session info: chrome=98.0.4758.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00F17AC3+2587331]
+	Ordinal0 [0x00EAADD1+2141649]
+	Ordinal0 [0x00DA3A80+1063552]
+	Ordinal0 [0x00D98222+1016354]
+	Ordinal0 [0x00D98A58+1018456]
+	Ordinal0 [0x00D9A292+1024658]
+	Ordinal0 [0x00D93F79+999289]
+	Ordinal0 [0x00DA4EF0+1068784]
+	Ordinal0 [0x00DF81D2+1409490]
+	Ordinal0 [0x00DE84A6+1344678]
+	Ordinal0 [0x00DC53F6+1201142]
+	Ordinal0 [0x00DC62E6+1204966]
+	GetHandleVerifier [0x010BDF22+1680738]
+	GetHandleVerifier [0x01170DBC+2413564]
+	GetHandleVerifier [0x00FAD151+563089]
+	GetHandleVerifier [0x00FABF13+558419]
+	Ordinal0 [0x00EB081E+2164766]
+	Ordinal0 [0x00EB5508+2184456]
+	Ordinal0 [0x00EB5650+2184784]
+	Ordinal0 [0x00EBF5BC+2225596]
+	BaseThreadInitThunk [0x77660419+25]
+	RtlGetAppContainerNamedObjectPath [0x77DB72AD+237]
+	RtlGetAppContainerNamedObjectPath [0x77DB727D+189]
+ 
+Traceback:
+  File "cases\Admin_action\auto_hytest_action.py", line 326, in teststeps
+    STEP(2, '添加多药品信息')
+  File "D:\study\Auto_hytest\lib\add_user.py", line 35, in area_click
+    webDriver.find_element(
+  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1238, in find_element
+    return self.execute(Command.FIND_ELEMENT, {
+  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 418, in execute
+    self.error_handler.check_response(response)
+  File "c:\python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 243, in check_response
+    raise exception_class(message, screen, stacktrace)
+selenium.common.exceptions.WebDriverException: Message: chrome not reachable
+  (Session info: chrome=98.0.4758.102)
+Stacktrace:
+Backtrace:
+	Ordinal0 [0x00F17AC3+2587331]
+	Ordinal0 [0x00EAADD1+2141649]
+	Ordinal0 [0x00DA3A80+1063552]
+	Ordinal0 [0x00D98222+1016354]
+	Ordinal0 [0x00D98A58+1018456]
+	Ordinal0 [0x00D9A292+1024658]
+	Ordinal0 [0x00D93F79+999289]
+	Ordinal0 [0x00DA4EF0+1068784]
+	Ordinal0 [0x00DF81D2+1409490]
+	Ordinal0 [0x00DE84A6+1344678]
+	Ordinal0 [0x00DC53F6+1201142]
+	Ordinal0 [0x00DC62E6+1204966]
+	GetHandleVerifier [0x010BDF22+1680738]
+	GetHandleVerifier [0x01170DBC+2413564]
+	GetHandleVerifier [0x00FAD151+563089]
+	GetHandleVerifier [0x00FABF13+558419]
+	Ordinal0 [0x00EB081E+2164766]
+	Ordinal0 [0x00EB5508+2184456]
+	Ordinal0 [0x00EB5650+2184784]
+	Ordinal0 [0x00EBF5BC+2225596]
+	BaseThreadInitThunk [0x77660419+25]
+	RtlGetAppContainerNamedObjectPath [0x77DB72AD+237]
+	RtlGetAppContainerNamedObjectPath [0x77DB727D+189]
 
 
--- 第 2 步 -- 切换到白月黑羽官网窗口 
-
-
--- 第 3 步 -- 获取导航栏菜单的信息 
-
-['Python基础', 'Python进阶', '图形界面程序', 'Web开发', '自动化测试', '性能测试', '其它']
-
-** 检查点 **  检查导航栏菜单的信息 ---->  通过
-
-  PASS 
 
 [ suite teardown ] cases\
 suite_teardown
 
 
-  ========= 测试结束 : 20220326_191303 =========
+  ========= 测试结束 : 20220326_233207 =========
 
 
-  耗时    : 37.845 秒
+  耗时    : 581.807 秒
 
 
-  预备执行用例数量 : 11
+  预备执行用例数量 : 1
 
-  实际执行用例数量 : 11
+  实际执行用例数量 : 1
 
-  通过 : 11
+  通过 : 0
 
   失败 : 0
 
-  异常 : 0
+  异常 : 1
 
   套件初始化失败 : 0
 

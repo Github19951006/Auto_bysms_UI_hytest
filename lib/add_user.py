@@ -196,3 +196,35 @@ def get_customer_drugs_order_info(info):
 		search_result_item_list.append(p_element.text)
 		INFO(search_result_item_list)
 		return search_result_item_list
+
+
+#  删除界面列出的所有条目，
+#  比如： 订单，或者客户，或者药品
+#  由于 代码逻辑相同，封装在函数 delAll 中
+def delAll(webDriver):
+
+    while True:
+        # 修改全局等待时间，以免找不到元素，等待时间较长
+        webDriver.implicitly_wait(1)
+        # 找到所有删除按钮
+        # 注意，一定要每次循环都 执行一遍，
+        # 因为每次删除后，界面元素重新 产生了
+        delButtons = webDriver.find_elements(By.CSS_SELECTOR,
+            '.search-result-item-actionbar label:nth-last-child(1)'
+                                             )
+        
+        # 再改回原来的等待时间
+        webDriver.implicitly_wait(5)
+
+        # 没有删除按钮，说明已经全部删除了
+        if not delButtons:
+            break
+
+        # 点击删除按钮
+        delButtons[0].click()
+
+        # 弹出对话框 点击确定
+        webDriver.switch_to.alert.accept()
+
+        # 等待1秒，等界面刷新
+        time.sleep(1)
