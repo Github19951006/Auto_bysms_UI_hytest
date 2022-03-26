@@ -18,6 +18,10 @@ class UI_0101:
 	name = '检查操作菜单 - UI-0101'
 	
 	def teststeps(self):
+		'''
+		检查左侧操作菜单栏信息
+		:return:
+		'''
 		
 		STEP(1,'获取左侧菜单信息')
 		webDriver = GSTORE['webDriver']
@@ -33,15 +37,17 @@ class UI_0101:
 		
 		
 class UI_0102:
+	# 根据标签挑选
+	tags = ['UI_0102', '系统测试']
 	name = '添加客户信息 - UI-0102'
 	
 	def teststeps(self):
 		
-		STEP(1, '点击左侧菜单客户按钮')
-		area_click()
+		STEP(1, '点击左侧菜单客户按钮_添加客户')
+		area_click('客户')
 		
 		STEP(2, '添加客户信息')
-		add_customer()
+		add_customer_drugs_order('添加客户信息')
 		
 		STEP(3, '获取添加的客户信息')
 		expected = [
@@ -52,7 +58,7 @@ class UI_0102:
 			'地址：',
 			'深圳市罗湖区友谊路人民医院'
 		]
-		CHECK_POINT('检查获取的信息', get_customer_info() == expected)
+		CHECK_POINT('检查获取的客户信息', get_customer_drugs_orderinfo('客户信息') == expected)
 		
 
 class UI_0103:
@@ -60,11 +66,11 @@ class UI_0103:
 	
 	def teststeps(self):
 		webDriver = GSTORE['webDriver']
-		STEP(1, '点击左侧菜单客户按钮')
-		area_click()
+		STEP(1, '点击左侧菜单客户按钮_添加客户')
+		area_click('客户')
 		
 		STEP(2, '添加客户信息')
-		add_customer()
+		add_customer_drugs_order('添加客户信息')
 		
 		STEP(3, '获取添加的客户信息')
 		expected = [
@@ -75,7 +81,7 @@ class UI_0103:
 			'地址：',
 			'深圳市罗湖区友谊路人民医院'
 		]
-		CHECK_POINT('检查获取的信息',get_customer_info() == expected)
+		CHECK_POINT('检查获取的信息',get_customer_drugs_orderinfo('客户信息') == expected)
 		
 		STEP(4,'修改客户信息')
 		# 获取添加的客户信息
@@ -104,4 +110,25 @@ class UI_0103:
 			'深圳市罗湖区友谊路人民医院'
 		]
 		
-		CHECK_POINT('检查获取的信息', get_customer_info() == expected)
+		CHECK_POINT('检查获取的客户信息', get_customer_drugs_orderinfo('客户信息') == expected)
+
+class UI_0105:
+	# 根据标签挑选
+	tags = ['UI_0105', '系统测试']
+	name = '添加药品信息 - UI-0105'
+	def teststeps(self):
+		# 引入浏览器驱动实例对象
+		webDriver = GSTORE['webDriver']
+		
+		STEP(1, '点击左侧菜单药品按钮_添加药品')
+		area_click('药品')
+		
+		STEP(2, '添加药品信息')
+		add_customer_drugs_order('添加药品信息')
+		
+		STEP(3, '获取添加的药品信息')
+		
+		# 预期结果
+		expected = ['药品：', '阿莫西林软膏', '编号：', '0001', '描述：', '中国好药膏']
+		CHECK_POINT('检查获取的药品信息', get_customer_drugs_orderinfo('药品信息') == expected)
+		
