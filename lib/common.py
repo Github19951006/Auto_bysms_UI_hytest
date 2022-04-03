@@ -31,6 +31,7 @@ def open_browser():
 	# 存储 全局共享 数据
 	GSTORE['webDriver'] = webDriver
 
+
 def mgr_login():
 	'''
 	管理员登录
