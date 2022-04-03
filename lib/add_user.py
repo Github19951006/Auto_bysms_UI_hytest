@@ -56,7 +56,7 @@ def area_click(info):
 	
 def add_customer_drugs_order(info,info_list):
 	'''
-	add_customer :添加客户信息方法
+	add_customer_drugs_order :添加客户、药品、订单信息方法
 	:return:
 	'''
 	
@@ -69,6 +69,7 @@ def add_customer_drugs_order(info,info_list):
 		form_controls[0].send_keys(info_list[0])
 		form_controls[1].send_keys(info_list[1])
 		form_controls[2].send_keys(info_list[2])
+		
 		# 点击创建按钮
 		col_elemet.find_element(By.CLASS_NAME, 'btn-xs').click()
 		
@@ -77,6 +78,7 @@ def add_customer_drugs_order(info,info_list):
 		col_elemet = webDriver.find_element(By.CLASS_NAME, 'add-one-area')
 		col_elemet.find_element(By.CLASS_NAME, 'btn-md').click()
 		form_controls = col_elemet.find_elements(By.CLASS_NAME, 'form-control')
+		
 		number = 0
 		while number < 3:
 			form_controls[0].send_keys(f'{info_list[0]}{number + 1}')
@@ -144,13 +146,15 @@ def add_customer_drugs_order(info,info_list):
 	
 def get_customer_drugs_order_info(info):
 	'''
-	get_customer_inf:获取用户添加后信息的方法
+	get_customer_drugs_order_info:获取用户添加后的客户、药品、订单信息的方法
 	返回一个信息列表
 	:return: result_element_itemrs_list
 	'''
 	webDriver = GSTORE['webDriver']
 	result_element = webDriver.find_element(By.CLASS_NAME, 'search-result-item')
-	result_element_itemrs = result_element.find_elements(By.CLASS_NAME, 'search-result-item-field')
+	result_element_itemrs = result_element.find_elements(
+		By.CLASS_NAME, 'search-result-item-field')
+	
 	if info == '客户信息':
 		# 存储客户信息相关的列表
 		result_element_itemrs_list = []

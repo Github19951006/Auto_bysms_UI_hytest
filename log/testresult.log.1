@@ -1,6 +1,6 @@
 
 
-  ========= 测试开始 : 20220326_182937 =========
+  ========= 测试开始 : 20220326_183452 =========
 
 
 
@@ -14,7 +14,7 @@ suite_setup
 
 >>> cases\Admin_action\auto_hytest_action.py
 
-* 检查操作菜单 - UI-0101  -  2022-03-26 18:29:40
+* 检查操作菜单 - UI-0101  -  2022-03-26 18:34:55
 
   [ case execution steps ]
 
@@ -29,7 +29,7 @@ suite_setup
 
   PASS 
 
-* 添加客户信息 - UI-0102  -  2022-03-26 18:29:41
+* 添加客户信息 - UI-0102  -  2022-03-26 18:34:56
 
   [ case execution steps ]
 
@@ -47,7 +47,7 @@ suite_setup
 
   PASS 
 
-* 修改客户信息 - UI-0103  -  2022-03-26 18:29:43
+* 修改客户信息 - UI-0103  -  2022-03-26 18:34:58
 
   [ case execution steps ]
 
@@ -75,7 +75,7 @@ suite_setup
 
   PASS 
 
-* 添加药品信息 - UI-0105  -  2022-03-26 18:29:46
+* 添加药品信息 - UI-0105  -  2022-03-26 18:35:01
 
   [ case execution steps ]
 
@@ -93,7 +93,7 @@ suite_setup
 
   PASS 
 
-* 添加订单信息 - UI-0107  -  2022-03-26 18:29:48
+* 添加订单信息 - UI-0107  -  2022-03-26 18:35:03
 
   [ case execution steps ]
 
@@ -126,7 +126,7 @@ suite_setup
 
 >>> cases\admin_login\auto_hytest_login.py
 
-* 管理员登录 不输入账号 - UI-0001  -  2022-03-26 18:29:55
+* 管理员登录 不输入账号 - UI-0001  -  2022-03-26 18:35:10
 
   [ case execution steps ]
 登录管理系统
@@ -137,7 +137,7 @@ suite_setup
 
 [ case teardown ] 管理员登录 不输入账号 - UI-0001
 
-* 管理员登录 不输入密码 - UI-0002  -  2022-03-26 18:29:57
+* 管理员登录 不输入密码 - UI-0002  -  2022-03-26 18:35:11
 
   [ case execution steps ]
 登录管理系统
@@ -148,7 +148,7 @@ suite_setup
 
 [ case teardown ] 管理员登录 不输入密码 - UI-0002
 
-* 管理员登录 输入错误账号 - UI-0003  -  2022-03-26 18:29:58
+* 管理员登录 输入错误账号 - UI-0003  -  2022-03-26 18:35:13
 
   [ case execution steps ]
 登录管理系统
@@ -159,7 +159,7 @@ suite_setup
 
 [ case teardown ] 管理员登录 输入错误账号 - UI-0003
 
-* 管理员登录 输入错误密码 - UI-0004  -  2022-03-26 18:29:59
+* 管理员登录 输入错误密码 - UI-0004  -  2022-03-26 18:35:14
 
   [ case execution steps ]
 登录管理系统
@@ -170,7 +170,7 @@ suite_setup
 
 [ case teardown ] 管理员登录 输入错误密码 - UI-0004
 
-* 管理员登录 输入错误密码 - UI-0005  -  2022-03-26 18:30:01
+* 管理员登录 输入错误密码 - UI-0005  -  2022-03-26 18:35:15
 
   [ case execution steps ]
 登录管理系统
@@ -184,96 +184,47 @@ suite_setup
 
 >>> cases\Windows_action\auto_hytest_windows.py
 
-* 窗口切换 - UI-0106  -  2022-03-26 18:30:02
+* 窗口切换 - UI-0106  -  2022-03-26 18:35:16
+
+[ case setup ] 窗口切换 - UI-0106
+打开浏览器
+登录管理系统
 
   [ case execution steps ]
 
 -- 第 1 步 -- 点击页脚处链接’白月黑羽教学使用，点击访问官网‘ 
 
-  ABORT   Message: no such element: Unable to locate element: {"method":"css selector","selector":".main-footer .pull-right a[href]"}
-  (Session info: chrome=98.0.4758.102)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x01457AC3+2587331]
-	Ordinal0 [0x013EADD1+2141649]
-	Ordinal0 [0x012E3BB8+1063864]
-	Ordinal0 [0x013101CE+1245646]
-	Ordinal0 [0x013103CB+1246155]
-	Ordinal0 [0x0133A612+1418770]
-	Ordinal0 [0x013286D4+1345236]
-	Ordinal0 [0x01338A0A+1411594]
-	Ordinal0 [0x013284A6+1344678]
-	Ordinal0 [0x013053F6+1201142]
-	Ordinal0 [0x013062E6+1204966]
-	GetHandleVerifier [0x015FDF22+1680738]
-	GetHandleVerifier [0x016B0DBC+2413564]
-	GetHandleVerifier [0x014ED151+563089]
-	GetHandleVerifier [0x014EBF13+558419]
-	Ordinal0 [0x013F081E+2164766]
-	Ordinal0 [0x013F5508+2184456]
-	Ordinal0 [0x013F5650+2184784]
-	Ordinal0 [0x013FF5BC+2225596]
-	BaseThreadInitThunk [0x764D0419+25]
-	RtlGetAppContainerNamedObjectPath [0x771772AD+237]
-	RtlGetAppContainerNamedObjectPath [0x7717727D+189]
- 
-Traceback:
-  File "cases\Windows_action\auto_hytest_windows.py", line 23, in teststeps
-    webDriver.find_element(By.CSS_SELECTOR,
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1238, in find_element
-    return self.execute(Command.FIND_ELEMENT, {
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 418, in execute
-    self.error_handler.check_response(response)
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 243, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.NoSuchElementException: Message: no such element: Unable to locate element: {"method":"css selector","selector":".main-footer .pull-right a[href]"}
-  (Session info: chrome=98.0.4758.102)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x01457AC3+2587331]
-	Ordinal0 [0x013EADD1+2141649]
-	Ordinal0 [0x012E3BB8+1063864]
-	Ordinal0 [0x013101CE+1245646]
-	Ordinal0 [0x013103CB+1246155]
-	Ordinal0 [0x0133A612+1418770]
-	Ordinal0 [0x013286D4+1345236]
-	Ordinal0 [0x01338A0A+1411594]
-	Ordinal0 [0x013284A6+1344678]
-	Ordinal0 [0x013053F6+1201142]
-	Ordinal0 [0x013062E6+1204966]
-	GetHandleVerifier [0x015FDF22+1680738]
-	GetHandleVerifier [0x016B0DBC+2413564]
-	GetHandleVerifier [0x014ED151+563089]
-	GetHandleVerifier [0x014EBF13+558419]
-	Ordinal0 [0x013F081E+2164766]
-	Ordinal0 [0x013F5508+2184456]
-	Ordinal0 [0x013F5650+2184784]
-	Ordinal0 [0x013FF5BC+2225596]
-	BaseThreadInitThunk [0x764D0419+25]
-	RtlGetAppContainerNamedObjectPath [0x771772AD+237]
-	RtlGetAppContainerNamedObjectPath [0x7717727D+189]
+
+-- 第 2 步 -- 切换到白月黑羽官网窗口 
 
 
+-- 第 3 步 -- 获取导航栏菜单的信息 
+
+['Python基础', 'Python进阶', '图形界面程序', 'Web开发', '自动化测试', '性能测试', '其它']
+
+** 检查点 **  检查导航栏菜单的信息 ---->  通过
+
+  PASS 
 
 [ suite teardown ] cases\
 suite_teardown
 
 
-  ========= 测试结束 : 20220326_183009 =========
+  ========= 测试结束 : 20220326_183527 =========
 
 
-  耗时    : 31.753 秒
+  耗时    : 34.875 秒
 
 
   预备执行用例数量 : 11
 
   实际执行用例数量 : 11
 
-  通过 : 10
+  通过 : 11
 
   失败 : 0
 
-  异常 : 1
+  异常 : 0
 
   套件初始化失败 : 0
 
