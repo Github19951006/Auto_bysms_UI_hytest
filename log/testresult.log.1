@@ -1,6 +1,6 @@
 
 
-  ========= 测试开始 : 20220326_232226 =========
+  ========= 测试开始 : 20220326_233336 =========
 
 
 
@@ -14,104 +14,57 @@ suite_setup
 
 >>> cases\Admin_action\auto_hytest_action.py
 
-* 添加订单信息 - UI-0108  -  2022-03-26 23:22:30
+* 添加订单信息 - UI-0108  -  2022-03-26 23:33:42
 
 [ case setup ] 添加订单信息 - UI-0108
-打开浏览器
-登录管理系统
 
   [ case execution steps ]
 
 -- 第 1 步 -- 点击左侧菜单药品按钮_添加药品 
 
-  ABORT   Message: chrome not reachable
-  (Session info: chrome=98.0.4758.102)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00F17AC3+2587331]
-	Ordinal0 [0x00EAADD1+2141649]
-	Ordinal0 [0x00DA3A80+1063552]
-	Ordinal0 [0x00D98222+1016354]
-	Ordinal0 [0x00D98A58+1018456]
-	Ordinal0 [0x00D9A292+1024658]
-	Ordinal0 [0x00D93F79+999289]
-	Ordinal0 [0x00DA4EF0+1068784]
-	Ordinal0 [0x00DF81D2+1409490]
-	Ordinal0 [0x00DE84A6+1344678]
-	Ordinal0 [0x00DC53F6+1201142]
-	Ordinal0 [0x00DC62E6+1204966]
-	GetHandleVerifier [0x010BDF22+1680738]
-	GetHandleVerifier [0x01170DBC+2413564]
-	GetHandleVerifier [0x00FAD151+563089]
-	GetHandleVerifier [0x00FABF13+558419]
-	Ordinal0 [0x00EB081E+2164766]
-	Ordinal0 [0x00EB5508+2184456]
-	Ordinal0 [0x00EB5650+2184784]
-	Ordinal0 [0x00EBF5BC+2225596]
-	BaseThreadInitThunk [0x77660419+25]
-	RtlGetAppContainerNamedObjectPath [0x77DB72AD+237]
-	RtlGetAppContainerNamedObjectPath [0x77DB727D+189]
- 
-Traceback:
-  File "cases\Admin_action\auto_hytest_action.py", line 326, in teststeps
-    STEP(2, '添加多药品信息')
-  File "D:\study\Auto_hytest\lib\add_user.py", line 35, in area_click
-    webDriver.find_element(
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 1238, in find_element
-    return self.execute(Command.FIND_ELEMENT, {
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\webdriver.py", line 418, in execute
-    self.error_handler.check_response(response)
-  File "c:\python38\lib\site-packages\selenium\webdriver\remote\errorhandler.py", line 243, in check_response
-    raise exception_class(message, screen, stacktrace)
-selenium.common.exceptions.WebDriverException: Message: chrome not reachable
-  (Session info: chrome=98.0.4758.102)
-Stacktrace:
-Backtrace:
-	Ordinal0 [0x00F17AC3+2587331]
-	Ordinal0 [0x00EAADD1+2141649]
-	Ordinal0 [0x00DA3A80+1063552]
-	Ordinal0 [0x00D98222+1016354]
-	Ordinal0 [0x00D98A58+1018456]
-	Ordinal0 [0x00D9A292+1024658]
-	Ordinal0 [0x00D93F79+999289]
-	Ordinal0 [0x00DA4EF0+1068784]
-	Ordinal0 [0x00DF81D2+1409490]
-	Ordinal0 [0x00DE84A6+1344678]
-	Ordinal0 [0x00DC53F6+1201142]
-	Ordinal0 [0x00DC62E6+1204966]
-	GetHandleVerifier [0x010BDF22+1680738]
-	GetHandleVerifier [0x01170DBC+2413564]
-	GetHandleVerifier [0x00FAD151+563089]
-	GetHandleVerifier [0x00FABF13+558419]
-	Ordinal0 [0x00EB081E+2164766]
-	Ordinal0 [0x00EB5508+2184456]
-	Ordinal0 [0x00EB5650+2184784]
-	Ordinal0 [0x00EBF5BC+2225596]
-	BaseThreadInitThunk [0x77660419+25]
-	RtlGetAppContainerNamedObjectPath [0x77DB72AD+237]
-	RtlGetAppContainerNamedObjectPath [0x77DB727D+189]
+
+-- 第 2 步 -- 添加多药品信息 
 
 
+-- 第 3 步 -- 点击左侧菜单客户按钮_添加客户 
+
+
+-- 第 4 步 -- 添加多客户信息 
+
+
+-- 第 5 步 -- 点击左侧菜单订单按钮_添加订单 
+
+
+-- 第 6 步 -- 添加订单信息 
+
+
+-- 第 7 步 -- 获取添加的订单信息 
+
+['订单：', 'Auto-yuerwen-test1', '客户：', '南方医科大学2', '药品：', '青霉素盒装2 * 100']
+
+** 检查点 **  检查获取的药品信息 ---->  通过
+
+  PASS 
 
 [ suite teardown ] cases\
 suite_teardown
 
 
-  ========= 测试结束 : 20220326_233207 =========
+  ========= 测试结束 : 20220326_233356 =========
 
 
-  耗时    : 581.807 秒
+  耗时    : 20.060 秒
 
 
   预备执行用例数量 : 1
 
   实际执行用例数量 : 1
 
-  通过 : 0
+  通过 : 1
 
   失败 : 0
 
-  异常 : 1
+  异常 : 0
 
   套件初始化失败 : 0
 
