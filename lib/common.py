@@ -8,6 +8,7 @@
 from selenium import webdriver
 from selenium.webdriver.common.by import By
 from hytest import *
+import time
 
 
 def open_browser():
@@ -50,3 +51,31 @@ def mgr_login():
 	webDriver.find_element(By.ID, 'password').send_keys('88888888')
 	# 点击按钮
 	webDriver.find_element(By.CLASS_NAME, 'btn-primary').click()
+	
+def delAll(webDriver):
+
+    while True:
+        # 修改全局等待时间，以免找不到元素，等待时间较长
+        webDriver.implicitly_wait(1)
+        # 找到所有删除按钮
+        # 注意，一定要每次循环都 执行一遍，
+        # 因为每次删除后，界面元素重新 产生了
+        delButtons = webDriver.find_elements_by_css_selector(
+            '.search-result-item-actionbar label:nth-last-child(1)')
+
+        # 再改回原来的等待时间
+        webDriver.implicitly_wait(5)
+
+        # 没有删除按钮，说明已经全部删除了
+        if not delButtons:
+            break
+
+        # 点击删除按钮
+        delButtons[0].click()
+
+        # 弹出对话框 点击确定
+        webDriver.switch_to.alert.accept()
+
+        # 等待1秒，等界面刷新
+        time.sleep(1)
+
