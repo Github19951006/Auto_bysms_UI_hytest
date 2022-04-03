@@ -32,21 +32,3 @@ def open_browser():
 	GSTORE['webDriver'] = webDriver
 
 
-def mgr_login():
-	'''
-	管理员登录
-	:return:空
-	'''
-	INFO('登录管理系统')
-	# 调用全局共享 数据
-	webDriver = GSTORE['webDriver']
-	
-	# 根据webdriver对象的get方法 打开指定的web地址
-	web_file = r'http://127.0.0.1/mgr/sign.html'
-	webDriver.get(web_file)
-	
-	# 输入用户名和密码
-	webDriver.find_element(By.ID, 'username').send_keys('byhy')
-	webDriver.find_element(By.ID, 'password').send_keys('88888888')
-	# 点击按钮
-	webDriver.find_element(By.CLASS_NAME, 'btn-primary').click()
