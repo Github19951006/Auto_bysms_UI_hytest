@@ -11,11 +11,9 @@ import time
 
 def area_click(info):
 	'''
-	点击左侧菜单客户按钮
-	:param info: 判断左侧菜单按钮信息
+	area_click:点击左侧菜单客户按钮
 	:return:
 	'''
-
 	webDriver = GSTORE['webDriver']
 	
 	# 判断左侧操作菜单栏按钮信息
@@ -58,9 +56,7 @@ def area_click(info):
 	
 def add_customer_drugs_order(info,info_list):
 	'''
-	添加客户、药品、订单信息方法
-	:param info: 判断添加信息
-	:param info_list: 输入信息列表
+	add_customer_drugs_order :添加客户、药品、订单信息方法
 	:return:
 	'''
 	
@@ -150,11 +146,10 @@ def add_customer_drugs_order(info,info_list):
 	
 def get_customer_drugs_order_info(info):
 	'''
-	获取用户添加后的客户、药品、订单信息的方法
-	:param info: 判断信息
-	:return: 获取检查信息列表
+	get_customer_drugs_order_info:获取用户添加后的客户、药品、订单信息的方法
+	返回一个信息列表
+	:return: result_element_itemrs_list
 	'''
-
 	webDriver = GSTORE['webDriver']
 	result_element = webDriver.find_element(By.CLASS_NAME, 'search-result-item')
 	result_element_itemrs = result_element.find_elements(
@@ -196,35 +191,3 @@ def get_customer_drugs_order_info(info):
 		search_result_item_list.append(p_element.text)
 		INFO(search_result_item_list)
 		return search_result_item_list
-
-
-#  删除界面列出的所有条目，
-#  比如： 订单，或者客户，或者药品
-#  由于 代码逻辑相同，封装在函数 delAll 中
-def delAll(webDriver):
-
-    while True:
-        # 修改全局等待时间，以免找不到元素，等待时间较长
-        webDriver.implicitly_wait(1)
-        # 找到所有删除按钮
-        # 注意，一定要每次循环都 执行一遍，
-        # 因为每次删除后，界面元素重新 产生了
-        delButtons = webDriver.find_elements(By.CSS_SELECTOR,
-            '.search-result-item-actionbar label:nth-last-child(1)'
-                                             )
-        
-        # 再改回原来的等待时间
-        webDriver.implicitly_wait(5)
-
-        # 没有删除按钮，说明已经全部删除了
-        if not delButtons:
-            break
-
-        # 点击删除按钮
-        delButtons[0].click()
-
-        # 弹出对话框 点击确定
-        webDriver.switch_to.alert.accept()
-
-        # 等待1秒，等界面刷新
-        time.sleep(1)
