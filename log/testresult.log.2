@@ -1,6 +1,6 @@
 
 
-  ========= 测试开始 : 20220404_000521 =========
+  ========= 测试开始 : 20220404_002418 =========
 
 
 
@@ -14,33 +14,53 @@ suite_setup
 
 >>> cases\Admin_action\auto_hytest_action.py
 
-* 添加订单信息 - UI-0108  -  2022-04-04 00:05:24
+* 添加订单信息 - UI-0108  -  2022-04-04 00:24:21
 
 [ case setup ] 添加订单信息 - UI-0108
-case setup fail | list index out of range 
-Traceback:
-  File "cases\Admin_action\auto_hytest_action.py", line 309, in setup
-    delAll(webDriver)
-  File "D:\study\Auto_hytest\lib\common.py", line 58, in delAll
-    e.find_elements(By.CSS_SELECTOR, 'label')[1].click()
-IndexError: list index out of range
 
+  [ case execution steps ]
+
+-- 第 1 步 -- 点击左侧菜单药品按钮_添加药品 
+
+
+-- 第 2 步 -- 添加多药品信息 
+
+
+-- 第 3 步 -- 点击左侧菜单客户按钮_添加客户 
+
+
+-- 第 4 步 -- 添加多客户信息 
+
+
+-- 第 5 步 -- 点击左侧菜单订单按钮_添加订单 
+
+
+-- 第 6 步 -- 添加订单信息 
+
+
+-- 第 7 步 -- 获取添加的订单信息 
+
+['订单：', 'Auto-yuerwen-test1', '客户：', '南方医科大学2', '药品：', '青霉素盒装2 * 100']
+
+** 检查点 **  检查获取的药品信息 ---->  通过
+
+  PASS 
 
 [ suite teardown ] cases\
 suite_teardown
 
 
-  ========= 测试结束 : 20220404_000527 =========
+  ========= 测试结束 : 20220404_002443 =========
 
 
-  耗时    : 5.640 秒
+  耗时    : 25.411 秒
 
 
   预备执行用例数量 : 1
 
   实际执行用例数量 : 1
 
-  通过 : 0
+  通过 : 1
 
   失败 : 0
 
@@ -50,6 +70,6 @@ suite_teardown
 
   套件清除  失败 : 0
 
-  用例初始化失败 : 1
+  用例初始化失败 : 0
 
   用例清除  失败 : 0
